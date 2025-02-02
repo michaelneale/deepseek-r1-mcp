@@ -1,0 +1,26 @@
+{
+  "name": "ollama-reasoner-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for task planning using Ollama",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "ollama-reasoner-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}
