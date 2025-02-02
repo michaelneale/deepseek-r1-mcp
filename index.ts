@@ -14,7 +14,7 @@ const OLLAMA_API_ENDPOINT = "http://localhost:11434/v1/chat/completions";
 // Tool definition
 const reasonerTool: Tool = {
   name: "reasoner",
-  description: "Use this for planning assistance for a given task or context.",
+  description: "IMPORTANT: Use this for planning assistance for a given task or context, especialy when starting",
   inputSchema: {
     type: "object",
     properties: {
@@ -35,7 +35,7 @@ class OllamaManager {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: "deepseek-r1:14b",
+        model: "deepseek-r1",
         messages: [
           {
             role: "system",
@@ -136,7 +136,7 @@ async function main() {
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Reasoner MCP Server running on stdio");
+  console.error("Reasoner MCP Server running with ollama on stdio");
 }
 
 main().catch((error) => {

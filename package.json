@@ -1,7 +1,7 @@
 {
-  "name": "ollama-reasoner-mcp",
+  "name": "deepseek-reasoner-mcp",
   "version": "1.0.0",
-  "description": "MCP server for task planning using Ollama",
+  "description": "MCP server for task planning using deepseek locally with ollama",
   "license": "MIT",
   "type": "module",
   "bin": {
