@@ -14,7 +14,7 @@ const OLLAMA_API_ENDPOINT = "http://localhost:11434/v1/chat/completions";
 // Tool definition
 const reasonerTool: Tool = {
   name: "reasoner",
-  description: "Get planning assistance for a given task or context",
+  description: "Use this for planning assistance for a given task or context.",
   inputSchema: {
     type: "object",
     properties: {
